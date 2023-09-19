@@ -7,21 +7,50 @@ body {
 		background: #fff;
 		margin: 100px auto;
 		text-align: center;
+
+		h1 {
+			font: bold 50px/1 'arial';
+			color: hotpink;
+			margin-bottom: 40px;
+		}
+		p {
+			margin-bottom: 30px;
+		}
+		a {
+			display: inline-block;
+			border: 1px solid red;
+			padding: 5px 20px;
+			background: hotpink;
+			font: bold 16px/1 'arial';
+			color: #fff;
+		}
 	}
-	h1 {
-		font: bold 50px/1 'arial';
-		color: hotpink;
-		margin-bottom: 40px;
+}
+//데스크탑 레이아웃을 모바일 버전으로 반응형 처리할때 주의점
+//모바일 디바이스는 폰이 너무다양하기 때문에 폭을 무조건 퍼센트처리
+@media screen and (max-width: 999px) {
+	body {
+		background: aqua;
+		section {
+			width: 80%;
+			h1 {
+				color: aqua;
+			}
+			a {
+				background: aqua;
+			}
+		}
 	}
-	p {
-		margin-bottom: 30px;
-	}
-	a {
-		display: inline-block;
-		border: 1px solid red;
-		padding: 5px 20px;
-		background: hotpink;
-		font: bold 16px/1 'arial';
-		color: #fff;
+}
+
+@media screen and (max-width: 599px) {
+	body {
+		background: orange;
+		section h1 {
+			color: orange;
+		}
+		a {
+			background: orange;
+		}
 	}
 }
